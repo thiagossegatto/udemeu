@@ -1,10 +1,10 @@
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
-import Main from './page/Main';
-import Search from './page/Search';
-import Courses from './page/Courses';
-import Wishlist from './page/Wishlist';
-import Account from './page/Account';
+import Main from './pages/Main';
+import Search from './pages/Search';
+import Courses from './pages/Courses';
+import Wishlist from './pages/Wishlist';
+import Account from './pages/Account';
 const Routes = createAppContainer(
   createBottomTabNavigator(
     {

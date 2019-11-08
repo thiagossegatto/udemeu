@@ -3,7 +3,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {Dimensions, Animated} from 'react-native';
 
 export const Container = styled.View`
-  height: 70px;
+  height: 65px;
   padding: 10px;
   align-items: center;
   flex-direction: row;
@@ -33,9 +33,8 @@ export const SearchView = styled(Animated.View)`
   background: #fff;
   align-items: center;
   top: 5px;
-  left: 0;
-  z-index: 100;
-  width: 100%;
+  left: 10;
+  z-index: 2;
 `;
 
 export const SearchInput = styled.TextInput.attrs({
@@ -48,6 +47,18 @@ export const SearchInput = styled.TextInput.attrs({
   border-radius: 5px;
   position: relative;
   width: 100%;
+`;
+
+export const SearchIcon = styled(Animated.createAnimatedComponent(Icon)).attrs(
+  props => ({
+    name: !props.active ? 'magnify' : 'arrow-left',
+  }),
+)`
+  color: #666;
+  font-size: 22px;
+  position: relative;
+  left: 10px;
+  z-index: 1;
 `;
 
 export const DarkView = styled(Animated.View)`
